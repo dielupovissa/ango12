@@ -32,30 +32,26 @@ def cSum(x,i,j):
     return sum
 
 def resJog(sx,jg):
-    cum1 =0
-    cum2 = 0
-    cum3 = 0
-    for i in range(100):
-        t = random.random()
-        if t < sx[jg][0]:
-            #print('1 ')
-            cum1 = cum1 +1
-    
-        elif t < sx[jg][1]:
-            #print('x ')
-            cum2 = cum2 + 1
-        else:
-            #print('2 ')
-            cum3 = cum3 + 1
-    if cum1 > cum2 and cum1 > cum3: return '1'
-    elif cum2 > cum1 and cum2 > cum3: return 'x'
+
+    t = random.random()
+    if t < sx[jg][0]: return '1'
+                
+    elif t < sx[jg][1]: return 'x'
+            
     else: return '2'
+        
 
     
 x = [[intProb(text(np, nj)) for np in range(3)] for nj in range(13)]
 
 sx = cumSum(x)
+texRes = open('result.txt','w')
 
-for i in range(13):
-    print(resJog(sx,i))
+
+for jg in range(10):
+    for i in range(13):
+        texRes.write(resJog(sx,i)+'\t')
+    texRes.write('\n')
+
+texRes.close()
 
