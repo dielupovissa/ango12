@@ -23,7 +23,7 @@ def text(np, nj):
 
 def cumSum(x):
     
-    return [[cSum(x,i,j)for i in range(3)] for j in range(13)]
+    return [[cSum(x,i,j)for i in range(3)] for j in range(12)]
 def cSum(x,i,j):
     sum = 0
     if i == 0: return x[j][0]
@@ -42,14 +42,14 @@ def resJog(sx,jg):
         
 
     
-x = [[intProb(text(np, nj)) for np in range(3)] for nj in range(13)]
+x = [[intProb(text(np, nj)) for np in range(3)] for nj in range(12)]
 
 sx = cumSum(x)
 texRes = open('result.txt','w')
 
 
-for jg in range(10):
-    for i in range(13):
+for fc in range(10):
+    for i in range(12):
         texRes.write(resJog(sx,i)+'\t')
     texRes.write('\n')
 
