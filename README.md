@@ -1,15 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Ango12 Calculator
 
-> Description the project.
+> This project creates a script to calculate the most probable outcome from tuelve football games. A kind of bet from Elephantbet Arena
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Python
+- vscode, git
 
 ## Live Demo (if available)
 
